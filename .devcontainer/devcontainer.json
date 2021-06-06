@@ -1,0 +1,15 @@
+{
+    "name": "postgresql",
+    "build": {
+        "dockerfile": "Dockerfile",
+    },
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+    },
+    "extensions": [
+        "ms-vscode.cpptools"
+    ],
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/workspace,type=bind,consistency=delegated",
+    "workspaceFolder": "/home/vscode/workspace",
+    "remoteUser": "vscode"
+}

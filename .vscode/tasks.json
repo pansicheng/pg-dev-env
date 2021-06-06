@@ -1,0 +1,67 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "echo Hello",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "configure",
+            "type": "shell",
+            "command": "./configure --enable-depend --enable-cassert --enable-debug CFLAGS=\"-ggdb -Og -g3 -fno-omit-frame-pointer\" --prefix=/home/vscode/pgsql",
+            "options": {
+                "cwd": "${workspaceFolder}/postgresql-13.3"
+            },
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "make",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/postgresql-13.3"
+            },
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "make clean",
+            "type": "shell",
+            "command": "make clean",
+            "options": {
+                "cwd": "${workspaceFolder}/postgresql-13.3"
+            },
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "make install",
+            "type": "shell",
+            "command": "make install",
+            "options": {
+                "cwd": "${workspaceFolder}/postgresql-13.3"
+            },
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "initdb",
+            "type": "shell",
+            "command": "/home/vscode/pgsql/bin/initdb -D /home/vscode/pgsql/data --no-locale --encoding=UTF8",
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        }
+    ]
+}

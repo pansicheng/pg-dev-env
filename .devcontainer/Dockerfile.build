@@ -1,0 +1,5 @@
+FROM gcc:latest
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y gdb
+RUN useradd --create-home --no-log-init --shell /bin/bash vscode
+USER vscode

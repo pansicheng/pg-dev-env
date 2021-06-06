@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) pgsql Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/postgresql-13.3/src/backend/postgres",
+            "args": [
+                "-D",
+                "/home/vscode/pgsql/data"
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+        },
+        {
+            "name": "(gdb) pgsql Launch help",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/postgresql-13.3/src/backend/postgres",
+            "args": [
+                "--help"
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+        },
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/postgresql-13.3/src/backend/postgres",
+            "processId": "${command:pickProcess}",
+            "MIMode": "gdb"
+        }
+    ]
+}
