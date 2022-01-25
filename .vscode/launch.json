@@ -8,7 +8,7 @@
             "name": "(gdb) pgsql Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/postgresql-13.3/src/backend/postgres",
+            "program": "${workspaceFolder}/../pgsql/bin/postgres",
             "args": [
                 "-D",
                 "/home/vscode/pgsql/data"
@@ -20,10 +20,18 @@
             "MIMode": "gdb",
         },
         {
+            "name": "(gdb) pgsql Attach",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "${workspaceFolder}/../pgsql/bin/postgres",
+            "processId": "${command:pickProcess}",
+            "MIMode": "gdb"
+        },
+        {
             "name": "(gdb) pgsql Launch help",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/postgresql-13.3/src/backend/postgres",
+            "program": "${workspaceFolder}/../pgsql/bin/postgres",
             "args": [
                 "--help"
             ],
@@ -34,12 +42,19 @@
             "MIMode": "gdb",
         },
         {
-            "name": "(gdb) Launch",
+            "name": "(gdb) initdb Launch",
             "type": "cppdbg",
-            "request": "attach",
-            "program": "${workspaceFolder}/postgresql-13.3/src/backend/postgres",
-            "processId": "${command:pickProcess}",
-            "MIMode": "gdb"
+            "request": "launch",
+            "program": "${workspaceRoot}/../pgsql/bin/initdb",
+            "args": [
+                "-D",
+                "/home/vscode/pgsql/data"
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
         }
     ]
 }

@@ -25,7 +25,7 @@
         {
             "label": "make",
             "type": "shell",
-            "command": "make",
+            "command": "make -j 16",
             "options": {
                 "cwd": "${workspaceFolder}/postgresql-13.3"
             },
@@ -47,7 +47,7 @@
         {
             "label": "make install",
             "type": "shell",
-            "command": "make install",
+            "command": "make -j 16 install",
             "options": {
                 "cwd": "${workspaceFolder}/postgresql-13.3"
             },
